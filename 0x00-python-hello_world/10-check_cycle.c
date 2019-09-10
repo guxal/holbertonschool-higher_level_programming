@@ -9,7 +9,9 @@ int check_cycle(listint_t *list)
 {
 	listint_t *first = list;
 
-	while (list)
+	if (!list)
+		return (0);
+	while (list->next)
 	{
 		if (first == list->next)
 			return (1);
