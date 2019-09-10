@@ -1,5 +1,4 @@
 #include "lists.h"
-#include <stdio.h>
 /**
  * check_cycle - check the node if is cycle or not
  * @list: list struct
