@@ -7,4 +7,4 @@ for i in range(1, 101):
     elif i % 5 == 0:
         print("{}".format("Buzz"), end=" ")
     else:
-        print("{}".format(i), end=" ")
+        print("{:d}".format(i), end=" ")
