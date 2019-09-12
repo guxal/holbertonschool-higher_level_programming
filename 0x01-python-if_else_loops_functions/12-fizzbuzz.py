@@ -8,3 +8,4 @@ for i in range(1, 101):
         print("{}".format("Buzz"), end=" ")
     else:
         print("{:d}".format(i), end=" ")
+print("")
