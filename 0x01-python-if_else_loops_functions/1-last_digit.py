@@ -2,7 +2,11 @@
 import sys
 import random
 number = random.randint(-10000, 10000)
-sys.stdout.write('Last digit of {} is {}'.format(number, number % 10))
+if number < 0 and abs(number) % 10 != 0:
+    sys.stdout.write('Last digit of {} is -{}'.format(number,
+                     abs(number) % 10))
+else:
+    sys.stdout.write('Last digit of {} is {}'.format(number, number % 10))
 if number % 10 > 5:
     sys.stdout.write(' and is greater than 5')
 elif number % 10 < 6 and number % 10 != 0:
