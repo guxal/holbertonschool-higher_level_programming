@@ -30,27 +30,26 @@ listint_t *add_nodeint(listint_t **head, const int n)
 int is_palindrome(listint_t **head)
 {
 	listint_t *new, *tmp, *clear;
-	int _break = 1;
 
 	new = NULL, tmp = *head;
 	if (!head || !(*head) || !(*head)->next)
 		return (1);
-	while (tmp->next != NULL || _break)
+	while (tmp->next != NULL)
 	{
-		if (add_nodeint(&new, tmp->n) == NULL)
-			return (0);
+		add_nodeint(&new, tmp->n);
 		if (tmp->n == (tmp->next)->n)
 		{
 			tmp = tmp->next;
 			break;
 		}
-		if (tmp->n == ((tmp->next)->next)->n)
-		{
-			tmp = (tmp->next)->next;
-			break;
-		} tmp = tmp->next;
+		if ((tmp->next)->next != NULL)
+			if (tmp->n == ((tmp->next)->next)->n)
+			{
+				tmp = (tmp->next)->next;
+				break;
+			} tmp = tmp->next;
 	} clear = new;
-	if (tmp->next == NULL)
+	if (!tmp->next)
 	{
 		free_listint(clear);
 		return (0);
