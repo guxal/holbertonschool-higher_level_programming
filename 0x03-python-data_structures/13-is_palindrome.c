@@ -32,6 +32,7 @@ int is_palindrome(listint_t **head)
 {
 	listint_t *new = NULL;
 	listint_t *tmp;
+	listint_t _free;
 
 	tmp = *head;
 
@@ -51,7 +52,7 @@ int is_palindrome(listint_t **head)
 		}
 		tmp = tmp->next;
 	}
-
+	_free = *new;
 	while (tmp)
 	{
 		if (tmp->n != new->n)
@@ -59,6 +60,6 @@ int is_palindrome(listint_t **head)
 		tmp = tmp->next;
 		new = new->next;
 	}
-
+	free_listint(&_free);
 	return (1);
 }
