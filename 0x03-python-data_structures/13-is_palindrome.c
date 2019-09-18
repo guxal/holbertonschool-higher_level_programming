@@ -21,7 +21,6 @@ listint_t *add_nodeint(listint_t **head, const int n)
 	*head = new;
 
 	return (new);
-
 }
 /**
  * is_palindrome - is palindrome
@@ -30,36 +29,44 @@ listint_t *add_nodeint(listint_t **head, const int n)
  */
 int is_palindrome(listint_t **head)
 {
-	listint_t *new = NULL;
-	listint_t *tmp;
-	listint_t _free;
+	listint_t *new, *tmp, *clear;
 
-	tmp = *head;
-
-	if (head == NULL)
+	new = NULL, tmp = *head;
+	if (*head == NULL)
 		return (1);
-
 	if (tmp->next == NULL)
 		return (0);
 
-	while (tmp)
+	while (tmp->next != NULL)
 	{
-		new = add_nodeint(&new, tmp->n);
+		if (add_nodeint(&new, tmp->n) == NULL)
+			return (0);
 		if (tmp->n == (tmp->next)->n)
 		{
 			tmp = tmp->next;
 			break;
-		}
-		tmp = tmp->next;
+		} tmp = tmp->next;
 	}
-	_free = *new;
-	while (tmp)
+	clear = new;
+	if (tmp->next == NULL)
+	{
+		free_listint(clear);
+		return (0);
+	}
+	while (tmp->next != NULL)
 	{
 		if (tmp->n != new->n)
+		{
+			free_listint(clear);
 			return (0);
-		tmp = tmp->next;
-		new = new->next;
+		}
+		tmp = tmp->next, new = new->next;
 	}
-	free_listint(&_free);
-	return (1);
+	if (new->next == NULL)
+	{
+		free_listint(clear);
+		return (1);
+	}
+	free_listint(clear);
+	return (0);
 }
