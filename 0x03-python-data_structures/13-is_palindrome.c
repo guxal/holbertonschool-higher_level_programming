@@ -32,10 +32,8 @@ int is_palindrome(listint_t **head)
 	listint_t *new, *tmp, *clear;
 
 	new = NULL, tmp = *head;
-	if (*head == NULL)
+	if (!head || !(*head) || !(*head)->next)
 		return (1);
-	if (tmp->next == NULL)
-		return (0);
 
 	while (tmp->next != NULL)
 	{
