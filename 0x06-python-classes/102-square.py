@@ -19,3 +19,39 @@ class Square:
             self.__size = size
         else:
             raise ValueError("size must be >= 0")
+
+    def __lt__(self, other):
+        '''
+        special method
+        '''
+        return (self.size < other.size)
+
+    def __gt__(self, other):
+        '''
+        special method
+        '''
+        return (self.area() > other.area())
+
+    def __le__(self, other):
+        '''
+        special method
+        '''
+        return (self.area() <= other.area())
+
+    def __ge__(self, other):
+        '''
+        special method
+        '''
+        return (self.area() >= other.area())
+
+    def __eq__(self, other):
+        '''
+        special method
+        '''
+        return (self.size == other.size)
+
+    def __eq__(self, other):
+        '''
+        special method
+        '''
+        return (self.area() == other.area())
