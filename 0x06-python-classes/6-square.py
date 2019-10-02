@@ -46,7 +46,7 @@ class Square:
         if len(value) != 2:
             raise Error
         elif (isinstance(value[1], int) and isinstance(value[0], int))is True:
-            if ((int(value[1]) and int(value[0])) >= 0):
+            if value[1] >= 0 and value[0] >= 0:
                 self.__position = value
             else:
                 raise Error
