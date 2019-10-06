@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 def print_square(size):
     if isinstance(size, int) is False:
         raise TypeError("size must be an integer")
