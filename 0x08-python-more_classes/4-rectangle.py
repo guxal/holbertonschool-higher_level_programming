@@ -73,6 +73,7 @@ class Rectangle:
             self.__height = value
 
     def __str__(self):
+        """Print the rectangle with the character #"""
         __list = ""
         w, h = self.width, self.height
         if (w or h) == 0:
@@ -87,4 +88,5 @@ class Rectangle:
         return __list
 
     def __repr__(self):
+        """Return: string representation of the rectangle"""
         return "Rectangle(" + str(self.width) + ", " + str(self.height) + ")"
