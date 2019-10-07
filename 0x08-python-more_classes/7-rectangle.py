@@ -11,8 +11,11 @@ class Rectangle:
         width (int): integer value of the width
         height (int): integer value of the height
         number_of_instances (int): integer number of the instances creates
+        print_symbol (str): print with the symbol
     """
+
     number_of_instances = 0
+
     print_symbol = '#'
 
     def __init__(self, width=0, height=0):
