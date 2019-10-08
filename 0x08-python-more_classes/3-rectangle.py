@@ -75,7 +75,7 @@ class Rectangle:
     def __str__(self):
         __list = ""
         w, h = self.width, self.height
-        if (w or h) == 0:
+        if w == 0 or h == 0:
             _list = ""
         else:
             for x in range(h):
