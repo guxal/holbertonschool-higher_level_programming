@@ -40,7 +40,7 @@ class Rectangle:
 
         """
         w, h = self.width, self.height
-        return 0 if (w or h) == 0 else 2*(w + h)
+        return 2 * (w + h) * bool(w and h)
 
     @property
     def width(self):
