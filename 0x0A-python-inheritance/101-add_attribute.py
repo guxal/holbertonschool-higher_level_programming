@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+
 def add_attribute(cls, name, value):
 
     if hasattr(cls, "__dict__"):
