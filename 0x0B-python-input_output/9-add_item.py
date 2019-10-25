@@ -8,12 +8,12 @@ import os.path
 
 save_to_json_file = __import__('7-save_to_json_file').save_to_json_file
 load_from_json_file = __import__('8-load_from_json_file').load_from_json_file
+write_file = __import__('3-write_file').write_file
 
 name_file = "add_item.json"
 
 if not os.path.exists(name_file):
-    with open(name_file, "w", encoding='utf-8') as f:
-        f.write("[]")
+    write_file(name_file, "[]")
 
 new_list = load_from_json_file(name_file)
 argc = len(sys.argv)
