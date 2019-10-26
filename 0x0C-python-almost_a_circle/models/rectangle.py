@@ -4,6 +4,7 @@ This module contains the Class Rectangle.
 """
 from models.base import Base
 
+
 class Rectangle(Base):
     """
     This Class Rectangle
