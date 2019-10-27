@@ -16,6 +16,14 @@ class Rectangle(Base):
         """
         return self.width * self.height
 
+    def display(self):
+        _display = ''
+        for i in range(self.height):
+            _display += self.width * "#"
+            if i != self.height - 1:
+                _display += '\n'
+        print(_display)
+
     def __init__(self, width, height, x=0, y=0, id=None):
         """
         init method
