@@ -40,4 +40,4 @@ class Base:
         if value <= 0 and name not in ["x", "y"]:
             raise ValueError(name + " must be > 0")
         elif value < 0:
-            raise ValueError(name + " must be => 0")
+            raise ValueError(name + " must be >= 0")
