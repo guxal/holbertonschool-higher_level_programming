@@ -17,6 +17,10 @@ class Rectangle(Base):
         return self.width * self.height
 
     def display(self):
+        """display method: print rectangle with symbol
+        Return:
+            none
+        """
         _display = ''
         for i in range(self.height):
             _display += self.width * "#"
