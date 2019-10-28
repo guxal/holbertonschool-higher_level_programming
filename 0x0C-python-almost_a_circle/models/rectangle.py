@@ -30,6 +30,25 @@ class Rectangle(Base):
                 _display += '\n'
         print(_display)
 
+    def update(self, *args):
+        """update method
+        Args:
+            @*args: pointer to a array data
+        """
+        if args and len(args) > 0:
+            for idx, arg in enumerate(args):
+                if idx == 0:
+                    super().__init__(arg)
+                if idx == 1:
+                    self.width = arg
+                if idx == 2:
+                    self.height = arg
+                if idx == 3:
+                    self.x = arg
+                if idx == 4:
+                    self.y = arg
+
+
     def __init__(self, width, height, x=0, y=0, id=None):
         """
         init method
