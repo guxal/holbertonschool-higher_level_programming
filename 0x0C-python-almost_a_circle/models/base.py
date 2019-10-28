@@ -2,6 +2,7 @@
 """
 This module contains the Class Base.
 """
+import json
 
 
 class Base:
@@ -41,3 +42,10 @@ class Base:
             raise ValueError(name + " must be > 0")
         elif value < 0:
             raise ValueError(name + " must be >= 0")
+
+    def to_json_string(list_dictionaries):
+        """to_json_string method
+        Return:
+            returns the JSON string representation of list_dictionaries
+        """
+        return json.dumps(list_dictionaries)
