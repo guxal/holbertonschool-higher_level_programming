@@ -22,8 +22,10 @@ class Rectangle(Base):
             none
         """
         _display = ''
+
+        _display += "\n" * self.y
         for i in range(self.height):
-            _display += self.width * "#"
+            _display += (" " * self.x) + (self.width * "#")
             if i != self.height - 1:
                 _display += '\n'
         print(_display)
