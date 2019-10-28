@@ -50,4 +50,4 @@ class Base:
             returns the JSON string representation of list_dictionaries
         """
         ld = list_dictionaries
-        return json.dumps(ld if ld is not None else "[]")
+        return json.dumps(ld) if ld is not None else "[]"
