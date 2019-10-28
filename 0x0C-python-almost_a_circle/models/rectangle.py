@@ -61,6 +61,20 @@ class Rectangle(Base):
                 if key == 'y':
                     self.y = value
 
+    def to_dictionary(self):
+        """to_dictionary method
+        Return:
+            return the dictionary representation of a Rectangle.
+            this dictionary must contain:
+             - id
+             - width
+             - height
+             - x
+             - y
+        """
+        attrs_list = ["id", "width", "height", "x", "y"]
+        return {key: getattr(self, key) for key in attrs_list}
+
     def __init__(self, width, height, x=0, y=0, id=None):
         """
         init method
