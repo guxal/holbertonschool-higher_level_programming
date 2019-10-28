@@ -107,3 +107,11 @@ class Rectangle(Base):
         """
         self.integer_validator("y", value)
         self.__y = value
+
+    def __str__(self):
+        """magic method __str__
+        Return:
+            [Rectangle] (<id>) <x>/<y> - <width>/<height>
+        """
+        _print = "Rectangle ({}) {}/{} - {}/{}"
+        return _print.format(self.id, self.x, self.y, self.width, self.height)
