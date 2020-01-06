@@ -1,3 +1,3 @@
 #!/bin/bash
 # This script use curl
-curl $1
+curl -L $1
