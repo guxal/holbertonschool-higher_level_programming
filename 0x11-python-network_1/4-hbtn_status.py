@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 import requests
-import sys
 """Request with Request"""
 if __name__ == "__main__":
     r = requests.get("https://intranet.hbtn.io/status")
