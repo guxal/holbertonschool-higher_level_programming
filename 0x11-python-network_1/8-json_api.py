@@ -11,7 +11,7 @@ if __name__ == "__main__":
         except Exception:
             d = {'q': ""}
 
-        r = requests.post(url, data={'q': d})
+        r = requests.post(ul2, data={'q': d})
         try:
             json = r.json()
             try:
