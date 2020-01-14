@@ -5,13 +5,13 @@ import sys
 if __name__ == "__main__":
     if len(sys.argv) == 2:
         ul2 = "http://0.0.0.0:5000/search_user"
-        url = "http://5c332d577923.41.hbtn-cod.io:5000/search_user"
+        url = "http://5c332d577923.41.hbtn-cod.io:5000/search_use"
         try:
             d = {'q': sys.argv[1]}
         except Exception:
             d = {'q': ""}
 
-        r = requests.post(url, data={'q': sys.argv[1]})
+        r = requests.post(url, data={'q': d})
         try:
             json = r.json()
             try:
