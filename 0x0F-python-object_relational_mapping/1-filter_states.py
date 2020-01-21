@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 '''This script list states with a name starting with N (upper N)'''
 import sys
 import MySQLdb
