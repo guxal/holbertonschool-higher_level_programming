@@ -18,7 +18,7 @@ if len(sys.argv) == 5:
 
     mycursor = mydb.cursor()
     query = "SELECT * FROM states WHERE name= %(username)s"
-    mycursor.execute(query,{'username': name})
+    mycursor.execute(query, {'username': name})
     myresult = mycursor.fetchall()
 
     for data in myresult:
