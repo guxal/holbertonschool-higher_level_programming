@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 '''This script list all states in order ASC'''
 import sys
 import MySQLdb
