@@ -13,6 +13,6 @@ if (idx < 2) {
 } else {
   const number = parseInt(process.argv[2]);
   if (number) {
-    print('My number ' + number);
+    print('My number: ' + number);
   } else { print('Not a number'); }
 }
